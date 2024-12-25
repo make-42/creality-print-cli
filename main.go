@@ -66,6 +66,8 @@ func (m model) View() string {
 	s += styling.Indent(fmt.Sprintf("Aux Fan: %s %%\n", styling.ColorFg(fmt.Sprintf("%d", data.CurrentData.AuxiliaryFanPct), styling.HighlightedColor)), config.Config.UIPaddingIndentAmount)
 	s += styling.Indent(fmt.Sprintf("Enclosure Fan: %s %%\n\n", styling.ColorFg(fmt.Sprintf("%d", data.CurrentData.CaseFanPct), styling.HighlightedColor)), config.Config.UIPaddingIndentAmount)
 
+	s += styling.Indent(fmt.Sprintf("Layer %s/%d\n\n", styling.ColorFg(fmt.Sprintf("%d", data.CurrentData.Layer), styling.HighlightedColor), data.CurrentData.TotalLayer), config.Config.UIPaddingIndentAmount)
+
 	s += styling.Indent(fmt.Sprintf("Used %s m of filament\n\n", styling.ColorFg(fmt.Sprintf("%0.2f", float64(data.CurrentData.UsedMaterialLength)/1000), styling.HighlightedColor)), config.Config.UIPaddingIndentAmount)
 
 	s += styling.Indent(fmt.Sprintf("Has been printing for %s\n", styling.ColorFg((time.Duration(data.CurrentData.PrintJobTime)*time.Second).String(), styling.HighlightedColor)), config.Config.UIPaddingIndentAmount)
