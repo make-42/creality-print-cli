@@ -79,6 +79,7 @@ func (m model) View() string {
 }
 
 func main() {
+	config.Init()
 	go data.Init()
 	p := tea.NewProgram(initialModel())
 	if _, err := p.Run(); err != nil {

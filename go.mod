@@ -6,8 +6,10 @@ require (
 	github.com/buger/goterm v1.0.4
 	github.com/charmbracelet/bubbletea v1.2.4
 	github.com/gorilla/websocket v1.5.3
+	github.com/kirsle/configdir v0.0.0-20170128060238-e45d2f54772f
 	github.com/lucasb-eyer/go-colorful v1.2.0
 	github.com/muesli/termenv v0.15.2
+	gopkg.in/yaml.v2 v2.4.0
 )
 
 require (
